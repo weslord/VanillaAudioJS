@@ -64,7 +64,7 @@
     audioNode.addEventListener('playing', playStarted);
     //audioNode.addEventListener('seeked', playStarted);
     function playStarted(e) {
-      audioButton.setAttribute('style', 'background-image: url(css/pause.svg);');
+      audioButton.setAttribute('style', 'background-image: url(pause.svg);');
     }
 
     audioNode.addEventListener('pause', playStopped);
@@ -72,7 +72,7 @@
     //audioNode.addEventListener('ended', playStopped);
     //audioNode.addEventListener('seeking', playStopped);
     function playStopped(e) {
-      audioButton.setAttribute('style', 'background-image: url(css/play.svg);');
+      audioButton.setAttribute('style', 'background-image: url(play.svg);');
     }
 
     audioNode.addEventListener('durationchange', function(e) {
