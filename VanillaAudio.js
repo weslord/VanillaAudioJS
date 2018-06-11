@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var audioButton = document.createElement('div');
           audioButton.classList.add('audio-button');
+          audioButton.classList.add('audio-paused');
 
       var audioProgCont = document.createElement('div');
           audioProgCont.classList.add('audio-bar-container');
@@ -64,15 +65,16 @@ document.addEventListener('DOMContentLoaded', function() {
     audioNode.addEventListener('playing', playStarted);
     //audioNode.addEventListener('seeked', playStarted);
     function playStarted(e) {
-      audioButton.setAttribute('style', 'background-image: url(pause.svg);');
+      audioButton.classList.remove('audio-paused');
+      audioButton.classList.add('audio-playing');
     }
 
     audioNode.addEventListener('pause', playStopped);
     //audioNode.addEventListener('waiting', playStopped);
     //audioNode.addEventListener('ended', playStopped);
-    //audioNode.addEventListener('seeking', playStopped);
     function playStopped(e) {
-      audioButton.setAttribute('style', 'background-image: url(play.svg);');
+      audioButton.classList.remove('audio-playing');
+      audioButton.classList.add('audio-paused');
     }
 
     audioNode.addEventListener('durationchange', function(e) {

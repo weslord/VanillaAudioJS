@@ -10,11 +10,18 @@
 }
 
 .audio-button {
-  background-image: url(play.svg);
   margin: 0.5em;
   height: 3em;
   width: 3em;
   display: inline-block;
+}
+
+.audio-playing {
+  background-image: url(pause.svg);
+}
+
+.audio-paused {
+  background-image: url(play.svg);
 }
 
 .audio-bar-container { 
