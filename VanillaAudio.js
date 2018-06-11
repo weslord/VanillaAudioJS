@@ -1,4 +1,4 @@
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
   var audioNodes = document.querySelectorAll('audio[controls]');
 
   audioNodes.forEach(function(audioNode) {
@@ -103,4 +103,4 @@
     return M +':'+ S;
   }
 
-})();
+});
